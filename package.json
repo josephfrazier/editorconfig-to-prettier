@@ -4,6 +4,9 @@
   "description": "Converts an `editorconfig`-parsed object to a `prettier` configuration",
   "main": "index.js",
   "scripts": {
+    "lint": "prettier --list-different *.js",
+    "fix": "prettier --write *.js",
+    "pretest": "npm run lint",
     "test": "node test"
   },
   "repository": {
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/josephfrazier/editorconfig-to-prettier/issues"
   },
-  "homepage": "https://github.com/josephfrazier/editorconfig-to-prettier#readme"
+  "homepage": "https://github.com/josephfrazier/editorconfig-to-prettier#readme",
+  "devDependencies": {
+    "prettier": "^1.7.4"
+  }
 }
