@@ -53,3 +53,21 @@ assert.deepStrictEqual(
     tabWidth: 0
   }
 );
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    quote_type: "single"
+  }),
+  {
+    singleQuote: true
+  }
+);
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    quote_type: "double"
+  }),
+  {
+    singleQuote: false
+  }
+);

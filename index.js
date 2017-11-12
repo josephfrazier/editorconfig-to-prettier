@@ -26,5 +26,11 @@ function editorConfigToPrettier(editorConfig) {
     result.printWidth = editorConfig.max_line_length;
   }
 
+  if (editorConfig.quote_type === "single") {
+    result.singleQuote = true;
+  } else if (editorConfig.quote_type === "double") {
+    result.singleQuote = false;
+  }
+
   return result;
 }
