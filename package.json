@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Converts an `editorconfig`-parsed object to a `prettier` configuration",
   "main": "index.js",
+  "files": [],
   "scripts": {
     "lint": "prettier --list-different *.js",
     "fix": "prettier --write *.js",
