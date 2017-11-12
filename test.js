@@ -43,3 +43,13 @@ assert.deepStrictEqual(
     printWidth: 100
   }
 );
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    tab_width: 0,
+    indent_size: 0
+  }),
+  {
+    tabWidth: 0
+  }
+);

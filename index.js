@@ -18,7 +18,7 @@ function editorConfigToPrettier(editorConfig) {
     editorConfig.indent_size !== "tab"
   ) {
     result.tabWidth = editorConfig.indent_size;
-  } else if (tabWidth) {
+  } else if (tabWidth !== undefined) {
     result.tabWidth = tabWidth;
   }
 
