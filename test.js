@@ -46,6 +46,26 @@ assert.deepStrictEqual(
 
 assert.deepStrictEqual(
   editorconfigToPrettier({
+    tab_width: 4,
+    indent_size: "tab"
+  }),
+  {
+    tabWidth: 4,
+    useTabs: true
+  }
+);
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    indent_size: "tab"
+  }),
+  {
+    useTabs: true
+  }
+);
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
     tab_width: 0,
     indent_size: 0
   }),
