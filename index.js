@@ -8,7 +8,9 @@ function editorConfigToPrettier(editorConfig) {
     result.useTabs = editorConfig.indent_style === "tab";
   }
 
-  const tabWidth = editorConfig.tab_width || editorConfig.indent_size;
+  if (editorConfig.indent_size === "tab") {
+    result.useTabs = true;
+  }
 
   if (result.useTabs && editorConfig.tab_width) {
     result.tabWidth = editorConfig.tab_width;
@@ -18,8 +20,8 @@ function editorConfigToPrettier(editorConfig) {
     editorConfig.indent_size !== "tab"
   ) {
     result.tabWidth = editorConfig.indent_size;
-  } else if (tabWidth !== undefined) {
-    result.tabWidth = tabWidth;
+  } else if (editorConfig.tab_width !== undefined) {
+    result.tabWidth = editorConfig.tab_width;
   }
 
   if (editorConfig.max_line_length) {
