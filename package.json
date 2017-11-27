@@ -1,6 +1,6 @@
 {
   "name": "editorconfig-to-prettier",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Converts an `editorconfig`-parsed object to a `prettier` configuration",
   "main": "index.js",
   "files": [],
