@@ -91,3 +91,13 @@ assert.deepStrictEqual(
     singleQuote: false
   }
 );
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    quote_type: "double",
+    max_line_length: "off"
+  }),
+  {
+    singleQuote: false
+  }
+);
