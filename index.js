@@ -1,7 +1,10 @@
 module.exports = editorConfigToPrettier;
 
 function editorConfigToPrettier(editorConfig) {
-  editorConfig = editorConfig || {};
+  if (!editorConfig || Object.keys(editorConfig).length === 0) {
+    return null;
+  }
+
   const result = {};
 
   if (editorConfig.indent_style) {

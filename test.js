@@ -101,3 +101,6 @@ assert.deepStrictEqual(
     singleQuote: false
   }
 );
+
+assert.deepStrictEqual(editorconfigToPrettier({}), null);
+assert.deepStrictEqual(editorconfigToPrettier(null), null);
