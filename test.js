@@ -102,5 +102,39 @@ assert.deepStrictEqual(
   }
 );
 
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    end_of_line: "cr"
+  }),
+  {
+    eol: "cr"
+  }
+);
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    end_of_line: "crlf"
+  }),
+  {
+    eol: "crlf"
+  }
+);
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    end_of_line: "lf"
+  }),
+  {
+    eol: "lf"
+  }
+);
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    end_of_line: 123
+  }),
+  {}
+);
+
 assert.deepStrictEqual(editorconfigToPrettier({}), null);
 assert.deepStrictEqual(editorconfigToPrettier(null), null);
