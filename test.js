@@ -107,7 +107,7 @@ assert.deepStrictEqual(
     end_of_line: "cr"
   }),
   {
-    eol: "cr"
+    endOfLine: "cr"
   }
 );
 
@@ -116,7 +116,7 @@ assert.deepStrictEqual(
     end_of_line: "crlf"
   }),
   {
-    eol: "crlf"
+    endOfLine: "crlf"
   }
 );
 
@@ -125,13 +125,13 @@ assert.deepStrictEqual(
     end_of_line: "lf"
   }),
   {
-    eol: "lf"
+    endOfLine: "lf"
   }
 );
 
 assert.deepStrictEqual(
   editorconfigToPrettier({
-    end_of_line: 123
+    endOfLine: 123
   }),
   {}
 );

@@ -38,7 +38,7 @@ function editorConfigToPrettier(editorConfig) {
   }
 
   if (["cr", "crlf", "lf"].indexOf(editorConfig.end_of_line) !== -1) {
-    result.eol = editorConfig.end_of_line;
+    result.endOfLine = editorConfig.end_of_line;
   }
 
   return result;
