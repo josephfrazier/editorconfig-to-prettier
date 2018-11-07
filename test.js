@@ -46,13 +46,12 @@ assert.deepStrictEqual(
 
 assert.deepStrictEqual(
   editorconfigToPrettier({
-    indent_style: "space",
-    indent_size: 2,
-    max_line_length: "unset"
+    tab_width: 4,
+    indent_size: "tab"
   }),
   {
-    useTabs: false,
-    tabWidth: 2
+    tabWidth: 4,
+    useTabs: true
   }
 );
 
@@ -139,10 +138,14 @@ assert.deepStrictEqual(
 
 assert.deepStrictEqual(
   editorconfigToPrettier({
-    useTabs: false,
-    tabWidth: "unset"
+    indent_style: "space",
+    indent_size: 2,
+    max_line_length: "unset"
   }),
-  {}
+  {
+    useTabs: false,
+    tabWidth: 2
+  }
 );
 
 assert.deepStrictEqual(
