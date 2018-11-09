@@ -148,13 +148,5 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
-  editorconfigToPrettier({
-    useTabs: false,
-    tabWidth: "unset"
-  }),
-  {}
-);
-
 assert.deepStrictEqual(editorconfigToPrettier({}), null);
 assert.deepStrictEqual(editorconfigToPrettier(null), null);
