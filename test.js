@@ -136,5 +136,17 @@ assert.deepStrictEqual(
   {}
 );
 
+assert.deepStrictEqual(
+  editorconfigToPrettier({
+    indent_style: "space",
+    indent_size: 2,
+    max_line_length: "unset"
+  }),
+  {
+    useTabs: false,
+    tabWidth: 2
+  }
+);
+
 assert.deepStrictEqual(editorconfigToPrettier({}), null);
 assert.deepStrictEqual(editorconfigToPrettier(null), null);
