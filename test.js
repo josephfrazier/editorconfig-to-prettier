@@ -148,5 +148,20 @@ assert.deepStrictEqual(
   }
 );
 
+assert.deepStrictEqual(
+  editorconfigToPrettier({ insert_final_newline: false }),
+  { insertFinalNewline: false }
+);
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({ insert_final_newline: "false" }),
+  {}
+);
+
+assert.deepStrictEqual(
+  editorconfigToPrettier({ insert_final_newline: true }),
+  {}
+);
+
 assert.deepStrictEqual(editorconfigToPrettier({}), null);
 assert.deepStrictEqual(editorconfigToPrettier(null), null);
