@@ -46,8 +46,12 @@ function editorConfigToPrettier(editorConfig) {
     result.tabWidth = editorConfig.tab_width;
   }
 
-  if (editorConfig.max_line_length && editorConfig.max_line_length !== "off") {
-    result.printWidth = editorConfig.max_line_length;
+  if (editorConfig.max_line_length) {
+    if (editorConfig.max_line_length === "off") {
+      result.printWidth = Number.POSITIVE_INFINITY;
+    } else {
+      result.printWidth = editorConfig.max_line_length;
+    }
   }
 
   if (editorConfig.quote_type === "single") {

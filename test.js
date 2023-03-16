@@ -98,6 +98,7 @@ assert.deepStrictEqual(
     max_line_length: "off",
   }),
   {
+    printWidth: Number.POSITIVE_INFINITY,
     singleQuote: false,
   }
 );
