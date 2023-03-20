@@ -1,8 +1,7 @@
-const assert = require("assert");
+import assert from "node:assert/strict";
+import editorconfigToPrettier from "./index.js";
 
-const editorconfigToPrettier = require("./");
-
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     indent_style: "tab",
     tab_width: 8,
@@ -16,7 +15,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     indent_style: "space",
     tab_width: 8,
@@ -30,7 +29,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     indent_style: "space",
     tab_width: 8,
@@ -44,7 +43,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     tab_width: 4,
     indent_size: "tab",
@@ -55,7 +54,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     indent_size: "tab",
   }),
@@ -64,7 +63,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     tab_width: 0,
     indent_size: 0,
@@ -74,7 +73,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     quote_type: "single",
   }),
@@ -83,7 +82,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     quote_type: "double",
   }),
@@ -92,7 +91,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     quote_type: "double",
     max_line_length: "off",
@@ -103,7 +102,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     end_of_line: "cr",
   }),
@@ -112,7 +111,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     end_of_line: "crlf",
   }),
@@ -121,7 +120,7 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     end_of_line: "lf",
   }),
@@ -130,14 +129,14 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     endOfLine: 123,
   }),
   {}
 );
 
-assert.deepStrictEqual(
+assert.deepEqual(
   editorconfigToPrettier({
     indent_style: "space",
     indent_size: 2,
@@ -149,14 +148,13 @@ assert.deepStrictEqual(
   }
 );
 
-assert.deepStrictEqual(
-  editorconfigToPrettier({ insert_final_newline: false }),
-  { insertFinalNewline: false }
-);
+assert.deepEqual(editorconfigToPrettier({ insert_final_newline: false }), {
+  insertFinalNewline: false,
+});
 
-assert.deepStrictEqual(editorconfigToPrettier({ insert_final_newline: true }), {
+assert.deepEqual(editorconfigToPrettier({ insert_final_newline: true }), {
   insertFinalNewline: true,
 });
 
-assert.deepStrictEqual(editorconfigToPrettier({}), null);
-assert.deepStrictEqual(editorconfigToPrettier(null), null);
+assert.deepEqual(editorconfigToPrettier({}), null);
+assert.deepEqual(editorconfigToPrettier(null), null);

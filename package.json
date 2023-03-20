@@ -2,8 +2,11 @@
   "name": "editorconfig-to-prettier",
   "version": "1.0.0",
   "description": "Converts an `editorconfig`-parsed object to a `prettier` configuration",
-  "main": "index.js",
-  "files": [],
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "lint": "prettier --list-different *.js",
     "fix": "prettier --write *.js",
