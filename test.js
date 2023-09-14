@@ -12,7 +12,7 @@ assert.deepEqual(
     useTabs: true,
     tabWidth: 8,
     printWidth: 100,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -26,7 +26,7 @@ assert.deepEqual(
     useTabs: false,
     tabWidth: 2,
     printWidth: 100,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -40,7 +40,7 @@ assert.deepEqual(
     useTabs: false,
     tabWidth: 8,
     printWidth: 100,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -51,7 +51,7 @@ assert.deepEqual(
   {
     tabWidth: 4,
     useTabs: true,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -60,7 +60,7 @@ assert.deepEqual(
   }),
   {
     useTabs: true,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -70,7 +70,7 @@ assert.deepEqual(
   }),
   {
     tabWidth: 0,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -79,7 +79,7 @@ assert.deepEqual(
   }),
   {
     singleQuote: true,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -88,7 +88,7 @@ assert.deepEqual(
   }),
   {
     singleQuote: false,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -99,7 +99,7 @@ assert.deepEqual(
   {
     printWidth: Number.POSITIVE_INFINITY,
     singleQuote: false,
-  }
+  },
 );
 
 assert.deepEqual(
@@ -108,7 +108,7 @@ assert.deepEqual(
   }),
   {
     endOfLine: "cr",
-  }
+  },
 );
 
 assert.deepEqual(
@@ -117,7 +117,7 @@ assert.deepEqual(
   }),
   {
     endOfLine: "crlf",
-  }
+  },
 );
 
 assert.deepEqual(
@@ -126,14 +126,14 @@ assert.deepEqual(
   }),
   {
     endOfLine: "lf",
-  }
+  },
 );
 
 assert.deepEqual(
   editorconfigToPrettier({
     endOfLine: 123,
   }),
-  {}
+  {},
 );
 
 assert.deepEqual(
@@ -145,7 +145,7 @@ assert.deepEqual(
   {
     useTabs: false,
     tabWidth: 2,
-  }
+  },
 );
 
 assert.deepEqual(editorconfigToPrettier({ insert_final_newline: false }), {
